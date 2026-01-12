@@ -1,4 +1,11 @@
 async function init() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const width = urlParams.get('width');
+  const height = urlParams.get('height');
+
+  if (width) document.documentElement.setAttribute('data-width', width);
+  if (height) document.documentElement.setAttribute('data-height', height);
+
   getUser();
 }
 
@@ -19,7 +26,7 @@ async function getUser() {
   }
 }
 
-function innerHTML(text_monto){
+function innerHTML(text_monto) {
   const pozoMid = document.getElementById('monto');
   const resto = document.getElementById('resto');
   const millonesId = document.getElementById('millones');
@@ -29,18 +36,21 @@ function innerHTML(text_monto){
   const parteDecimal = mm[1]; // puede ser undefined si no hay apóstrofo
 
   let monto = parteEntera;
-  
+
   if (parteDecimal) {
     monto += '.' + parteDecimal.substring(0, 1); // dos primeros dígitos
-    pozoMid.style.left = '27.5%'
+    const width = document.documentElement.getAttribute('data-width');
+    if (!width || (width !== '800' && width !== '768' && width !== '720')) {
+      pozoMid.style.left = '27.5%';
+    }
   }
 
   pozoMid.innerHTML = monto;
   // resto.innerHTML = parteDecimal.substring(1);
   // millonesId.innerHTML = " MILLONES";
-  
+
   // Clase condicional según primer dígito del decimal
-  pozoMid.className = (parteDecimal && parteDecimal.charAt(0) === '0') 
-    ? 'pozoUnidad' 
+  pozoMid.className = (parteDecimal && parteDecimal.charAt(0) === '0')
+    ? 'pozoUnidad'
     : 'pozo2digitos';
 }

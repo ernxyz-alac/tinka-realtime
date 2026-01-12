@@ -3,7 +3,9 @@
     margin: 0;
 }
 
-html, body, main {
+html,
+body,
+main {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -52,13 +54,37 @@ main {
 }
 
 @keyframes mainFade {
-    0%, 49.99% { opacity: 1; visibility: visible; z-index: -1; }
-    50%, 100% { opacity: 0; visibility: hidden; z-index: -2; }
+
+    0%,
+    49.99% {
+        opacity: 1;
+        visibility: visible;
+        z-index: -1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -2;
+    }
 }
 
 @keyframes secondaryFade {
-    0%, 49.99% { opacity: 0; visibility: hidden; z-index: -2; }
-    50%, 100% { opacity: 1; visibility: visible; z-index: -1; }
+
+    0%,
+    49.99% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -2;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        visibility: visible;
+        z-index: -1;
+    }
 }
 
 .pozoUnidad {
@@ -86,76 +112,63 @@ main {
 
 /* 800x420 */
 @media only screen and (max-width: 800px) {
-    .pozoUnidad {
-        font-size: 100pt !important;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 10;
-        left: 37%;
-        right: 2%;
-        top: 24%;
-        /* letter-spacing: 9px; */
-    }
-    .pozo2digitos {
-        font-size: 100pt !important;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 10;
-        left: 37%;
-        right: 2%;
-        top: 24%;
-        /* letter-spacing: 9px; */
+    html[data-width="800"] {
+
+        .pozoUnidad,
+        .pozo2digitos {
+            font-size: 100pt !important;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 10;
+            left: 37%;
+            right: 2%;
+            top: 24%;
+        }
     }
 }
 
 /* 768x384 */
 @media only screen and (max-width: 768px) {
-    #monto, #resto {
-        font-size: 140pt!important;
-        color: #027239;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 10;
-        left: 37.5%;
-        /* right: 2%; */
-        /* top: 21%; */
-        /* letter-spacing: 9px; */
+    html[data-width="768"] {
+
+        .pozoUnidad,
+        .pozo2digitos {
+            font-size: 140pt !important;
+            color: #027239;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 10;
+            left: 37.5%;
+            top: 20%;
+        }
     }
-    #monto {
-        position: absolute;
-        top: 20%;
-    }
-    /* #resto {
-        position: absolute;
-        top: 45%;
-    } */
 }
 
 /* 720x360 */
 @media only screen and (max-width: 720px) {
-    .pozoUnidad {
-        font-size: 105pt !important;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 10;
-        left: 40%;
-        right: 2%;
-        top: 27%;
-        /* letter-spacing: 9px; */
-    }
-    .pozo2digitos {
-        font-size: 85pt!important;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        z-index: 10;
-        left: 37%;
-        right: 2%;
-        top: 24%;
-        /* letter-spacing: 9px; */
+    html[data-width="720"] {
+        .pozoUnidad {
+            font-size: 105pt !important;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 10;
+            left: 40%;
+            right: 2%;
+            top: 27%;
+        }
+
+        .pozo2digitos {
+            font-size: 85pt !important;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 10;
+            left: 37%;
+            right: 2%;
+            top: 24%;
+        }
     }
 }
