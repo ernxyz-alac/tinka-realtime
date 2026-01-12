@@ -116,7 +116,7 @@ main {
 
         .pozoUnidad,
         .pozo2digitos {
-            font-size: 100pt !important;
+            font-size: 160pt !important;
             width: 20px;
             height: 20px;
             position: absolute;
