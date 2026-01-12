@@ -36,7 +36,7 @@ function innerHTML(text_monto){
   }
 
   pozoMid.innerHTML = monto;
-  resto.innerHTML = parteDecimal.substring(1);
+  // resto.innerHTML = parteDecimal.substring(1);
   // millonesId.innerHTML = " MILLONES";
   
   // Clase condicional según primer dígito del decimal
