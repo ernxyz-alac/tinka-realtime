@@ -1,14 +1,5 @@
-var content = document.getElementById('contenido');
 async function init() {
-  const video = document.getElementById('miVideo');
   getUser();
-  video.addEventListener('timeupdate', function() {
-      if (video.currentTime < 4.728) {
-         content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
-  });
 }
 
 init();
@@ -30,6 +21,7 @@ async function getUser() {
 
 function innerHTML(text_monto){
   const pozoMid = document.getElementById('monto');
+  const resto = document.getElementById('resto');
   const millonesId = document.getElementById('millones');
 
   const mm = text_monto.split("'"); // ["15", "341,500"]
@@ -38,12 +30,14 @@ function innerHTML(text_monto){
 
   let monto = parteEntera;
   
-  if (parteDecimal && parteDecimal.charAt(0) !== '0') {
+  if (parteDecimal) {
     monto += '.' + parteDecimal.substring(0, 1); // dos primeros dígitos
+    pozoMid.style.left = '27.5%'
   }
 
   pozoMid.innerHTML = monto;
-  millonesId.innerHTML = " MILLONES";
+  resto.innerHTML = parteDecimal.substring(1);
+  // millonesId.innerHTML = " MILLONES";
   
   // Clase condicional según primer dígito del decimal
   pozoMid.className = (parteDecimal && parteDecimal.charAt(0) === '0') 
