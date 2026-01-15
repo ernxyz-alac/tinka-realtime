@@ -112,11 +112,11 @@ main {
 
 /* 800x420 */
 @media only screen and (max-width: 800px) {
-    html[data-width="800"] {
+
 
         .pozoUnidad,
         .pozo2digitos {
-            font-size: 160pt !important;
+            font-size: 140pt !important;
             width: 20px;
             height: 20px;
             position: absolute;
@@ -125,30 +125,28 @@ main {
             right: 2%;
             top: 24%;
         }
-    }
+
 }
 
 /* 768x384 */
 @media only screen and (max-width: 768px) {
-    html[data-width="768"] {
 
         .pozoUnidad,
         .pozo2digitos {
-            font-size: 160pt !important;
-            color: #027239;
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            z-index: 10;
-            left: 37.5%;
-            top: 20%;
-        }
+        font-size: 120pt !important;
+        color: #027239;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        z-index: 10;
+        left: 37.5%;
+        top: 23%;
     }
 }
 
 /* 720x360 */
 @media only screen and (max-width: 720px) {
-    html[data-width="720"] {
+
         .pozoUnidad {
             font-size: 105pt !important;
             width: 20px;
@@ -161,7 +159,7 @@ main {
         }
 
         .pozo2digitos {
-            font-size: 85pt !important;
+            font-size: 116pt !important;
             width: 20px;
             height: 20px;
             position: absolute;
@@ -170,5 +168,5 @@ main {
             right: 2%;
             top: 24%;
         }
-    }
+
 }
