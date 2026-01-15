@@ -112,8 +112,6 @@ main {
 
 /* 800x420 */
 @media only screen and (max-width: 800px) {
-
-
         .pozoUnidad,
         .pozo2digitos {
             font-size: 140pt !important;
@@ -125,12 +123,10 @@ main {
             right: 2%;
             top: 24%;
         }
-
 }
 
 /* 768x384 */
 @media only screen and (max-width: 768px) {
-
         .pozoUnidad,
         .pozo2digitos {
         font-size: 120pt !important;
